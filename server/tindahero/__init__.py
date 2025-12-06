@@ -19,6 +19,10 @@ def create_app():
     from .app import register_routes
     register_routes(app)
 
+    #Blueprints
+    from .auth import bp
+    app.register_blueprint(bp)
+
     return app
 
 
